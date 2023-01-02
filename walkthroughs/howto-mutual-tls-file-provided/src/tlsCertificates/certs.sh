@@ -41,7 +41,7 @@ generate_ca ca
 echo "Generating gateway certificate"
 generate_rsa_key client ca
 generate_x509_cert client ca
-generate_cert_chain gateway ca
+generate_cert_chain client ca
 
 echo "Generating colorteller certificate"
 generate_rsa_key server ca
