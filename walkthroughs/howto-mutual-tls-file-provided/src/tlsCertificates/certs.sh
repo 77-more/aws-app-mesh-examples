@@ -39,14 +39,14 @@ echo "Generating CA certificate"
 generate_ca ca
 
 echo "Generating gateway certificate"
-generate_rsa_key gateway ca
-generate_x509_cert gateway ca
+generate_rsa_key client ca
+generate_x509_cert client ca
 generate_cert_chain gateway ca
 
 echo "Generating colorteller certificate"
-generate_rsa_key colorteller ca
-generate_x509_cert colorteller ca
-generate_cert_chain colorteller ca
+generate_rsa_key server ca
+generate_x509_cert server ca
+generate_cert_chain server ca
 
 rm $DIR/*.csr
 rm $DIR/*.srl
