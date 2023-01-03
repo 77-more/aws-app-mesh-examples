@@ -7,16 +7,16 @@ getSecret() {
 }
 
 getCertificates() {
-    if [[ $CERTIFICATE_NAME = "gateway" ]];
+    if [[ $CERTIFICATE_NAME = "client" ]];
     then
         getSecret "ca_cert"
-        getSecret "gateway_key"
-        getSecret "gateway_cert_chain"
+        getSecret "client_key"
+        getSecret "client_cert_chain"
     fi
-    if [[ $CERTIFICATE_NAME = "colorteller" ]];
+    if [[ $CERTIFICATE_NAME = "server" ]];
     then
-        getSecret "colorteller_key"
-        getSecret "colorteller_cert_chain"
+        getSecret "server_key"
+        getSecret "server_cert_chain"
         getSecret "ca_cert"
     fi
 }
